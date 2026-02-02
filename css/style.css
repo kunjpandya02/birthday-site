@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to top, #fdeff2, #fce4ec);
+  font-family: 'Poppins', Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Soft overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.25);
+  z-index: 0;
+}
+
+/* Text */
+.title {
+  margin-top: 40px;
+  font-size: 3.2rem;
+  color: #ff6f91;
+  position: relative;
+  z-index: 2;
+}
+
+.subtitle {
+  margin-top: -10px;
+  font-size: 1.1rem;
+  color: #777;
+  position: relative;
+  z-index: 2;
+}
+
+/* Center content */
+.center-area {
+  margin-top: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Cake */
+#cake {
+  width: 240px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#cake:hover {
+  transform: scale(1.05);
+}
+
+#cut-text {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Gift */
+#gift {
+  width: 180px;
+  margin-top: 40px;
+  display: none;
+  cursor: pointer;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Balloons */
+.balloon {
+  position: absolute;
+  bottom: -150px;
+  width: 70px;
+  opacity: 0.85;
+  animation: fly linear infinite;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes fly {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-120vh);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  #cake {
+    width: 180px;
+  }
+
+  #gift {
+    width: 140px;
+  }
+
+  .balloon {
+    width: 50px;
+  }
+}

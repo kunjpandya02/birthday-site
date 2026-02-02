@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to top, #fdeff2, #fce4ec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe Script', 'Comic Sans MS', cursive;
+}
+
+.paper {
+  background: #fffdf8;
+  width: 80%;
+  max-width: 700px;
+  padding: 50px 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  animation: fadeIn 2s ease;
+}
+
+.paper p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.signature {
+  margin-top: 40px;
+  text-align: right;
+  font-size: 1.4rem;
+  color: #ff6f91;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ff6f91;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+@media (max-width: 768px) {
+
+  .paper {
+    width: 90%;
+    padding: 35px 25px;
+  }
+
+  .paper p {
+    font-size: 1.1rem;
+  }
+
+  .signature {
+    font-size: 1.2rem;
+  }
+
+  #music-btn {
+    top: 15px;
+    right: 15px;
+  }
+}

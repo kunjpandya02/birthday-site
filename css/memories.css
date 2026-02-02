@@ -1,0 +1,94 @@
+body {
+  background: #fff6f9;
+  font-family: Arial, sans-serif;
+  text-align: center;
+
+  /* IMPORTANT FIX */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* Heart Rain Layer */
+.heart-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  top: -20px;
+  font-size: 18px;
+  animation: fall linear forwards;
+  opacity: 0.8;
+}
+
+/* Gallery stays above hearts */
+.gallery, h1 {
+  position: relative;
+  z-index: 2;
+}
+
+/* Polaroid style */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.polaroid {
+  background: white;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+  transform: rotate(-3deg);
+}
+
+.polaroid img {
+  width: 100%;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+.final-btn {
+  padding: 12px 25px;
+  border: none;
+  background: #ff6f91;
+  color: white;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.final-btn:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .polaroid {
+    width: 80%;
+    max-width: 260px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    padding: 0 10px;
+  }
+}
